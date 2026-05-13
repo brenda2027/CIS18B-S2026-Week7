@@ -42,3 +42,26 @@ public class ProcessVsThreadClinic {
         NOT_MEANINGFULLY_CONCURRENT
     }
 }
+
+/* 
+* Written responsses:
+* 
+* 1. student-code-runner
+* I would classify this to be PROCESS. As the student-written code is recommended to be kept seperate 
+* from the main program due to the possibility of crashing or anything unsafe. As this allow its to be
+* a stronger protecting since it has its own form of memory space.
+*
+* 2.gradebook-auto-save
+* I would classify this as THREAD. Since auto-save is part of the same application and is only able to
+* work in the background. When there is a saving of memory this allows there to a sharing of the current
+* gradebook, a risk that happens is that to say if the user is changing as it saves.
+*
+* 3. sort-single-list-once
+* I would classify this as NOT_MEANINGFULLY_CONCURRENT. Since there is only the sorting of one list and
+* finish from there. The add of extras would over complicate this. 
+*
+* Extension Challenge
+* Through a music app there is the usage of background thread which loads the next part of that song as 
+* the current one still plays. The sharing of memeory helps the player know which audio data is ready.
+* Of course this remains the need to be careful stll.
+*/

@@ -33,3 +33,16 @@ public class LivenessDiagnosisLab {
         );
     }
 }
+
+/* Locker-order-conflict:
+This is having to be a deadlock due to the two threads holding one lock while it waits for the other lock. Due to neither thread being able to release what is needed, both get stuck. A way to fix is to make every thread acquire locks in the same order each time.
+
+Always-last-in-line: Starvation
+Since this starvation due to one worker possibly continue to miss its chance to use the shared resource. The program continues to progress but the worker does not that is having issues. A way to fix this is by using queue in which everyone get theres turn in a specific order.
+
+Over-polite-retry-loop: Livelokc
+This is livelock since workers are active but their repeated backing prevents useful progress. To fix this the usage of randomized backoff.
+
+Extension challenge: deadlock
+To fix this is by giving a fixed order and always ensuring the first lock before the second. 
+*/

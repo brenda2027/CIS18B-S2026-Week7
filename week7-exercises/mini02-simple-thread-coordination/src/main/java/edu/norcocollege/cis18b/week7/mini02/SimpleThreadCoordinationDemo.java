@@ -33,6 +33,13 @@ public class SimpleThreadCoordinationDemo {
             worker.join();
         }
 
+        List<String> expected0rder = List.of(
+            "grader-importer finished 3 steps",
+            "email-notifier finished 2 steps",
+            "roster-sync finished 4 steps"
+
+        );
+
         completionLog.sort(Comparator.naturalOrder());
         return completionLog;
     }

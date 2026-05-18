@@ -3,11 +3,11 @@ package edu.norcocollege.cis18b.week7.mini03;
 public class UnsafeCounter {
     private int value;
 
-    public void increment() {
+    public synchronized void increment() {
         value++;
     }
 
-    public int getValue() {
+    public synchronized int getValue() {
         return value;
     }
 }

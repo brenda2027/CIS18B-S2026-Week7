@@ -17,3 +17,13 @@ public class RaceConditionDemo {
         System.out.println("Atomic count: " + atomic);
     }
 }
+/*
+* Written response:
+*
+* With the expression values++ it is not the safest when multiple threads are to use the same counter.
+* There are multiple steps taking place such as reading current value, adds one, and writes new values 
+* back. With an overlap there can be an update lost
+*
+* With unsafe count is should not be tested against one number due to the thread scheduling changing 
+* each tme when the program runs
+*/
